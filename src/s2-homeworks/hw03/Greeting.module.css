@@ -5,6 +5,8 @@
 }
 
 .error {
+
+
 }
 
 .input {
@@ -32,4 +34,8 @@
 }
 
 .greeting {
+}
+
+.errorInput {
+    border-color: red;
 }
