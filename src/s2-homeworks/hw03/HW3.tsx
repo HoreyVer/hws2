@@ -44,7 +44,7 @@ const HW3 = () => {
             {/*для автоматической проверки дз (не менять)*/}
 
             <div className={s2.hw}>
-                <GreetingContainer
+               1 <GreetingContainer
                     users={users}
                     addUserCallback={addUserCallback}
                 />
