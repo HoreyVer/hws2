@@ -2,15 +2,19 @@
 }
 
 .disabled {
+    color: green;
 }
 
 .secondary {
+    font-weight: bold;
 }
 
 .default {
+    font-size: 50px;
 }
 
 .red {
+    color: red;
 }
 
 .default:hover {

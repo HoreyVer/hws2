@@ -29,6 +29,7 @@ export const pureAddUserCallback = (name: string, setUsers: (users: Array<UserTy
         name// need to fix
     }
     setUsers([...users, user])
+    console.log(name)
 }
 
 const HW3 = () => {
@@ -44,7 +45,7 @@ const HW3 = () => {
             {/*для автоматической проверки дз (не менять)*/}
 
             <div className={s2.hw}>
-               1 <GreetingContainer
+               <GreetingContainer
                     users={users}
                     addUserCallback={addUserCallback}
                 />

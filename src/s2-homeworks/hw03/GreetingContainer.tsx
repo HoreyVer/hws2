@@ -9,7 +9,7 @@ type GreetingContainerPropsType = {
 
 export const pureAddUser = (name: string, setError: (error: string) => void, setName: (name: string) => void, addUserCallback: (name: string) => void) => {
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
-    if (name.replace(/ /g, '') == "") setError("Ошибка! Введите имя!")
+    if (name.trim() == "") setError("Ошибка! Введите имя!")
     else {
         addUserCallback(name)
         setName("")
@@ -18,7 +18,7 @@ export const pureAddUser = (name: string, setError: (error: string) => void, set
 }
 
 export const pureOnBlur = (name: string, setError: (error: string) => void) => { // если имя пустое - показать ошибку
-    if (name.replace(/ /g, '') == "") setError("Ошибка! Введите имя!")
+    if (name.trim() == "") setError("Ошибка! Введите имя!")
 }
 
 export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => void) => { // если нажата кнопка Enter - добавить
@@ -58,7 +58,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     let totalUsers = users.length  // need to fix
-    const lastUserName = name.replace(/ /g, '') // need to fix
+    const lastUserName = users.length > 0 ? users[users.length - 1].name : ''  // need to fix
+
 
     return (
         <Greeting
